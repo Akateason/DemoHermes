@@ -1,0 +1,6 @@
+module Pods_DemoHermes_DemoHermesTests {
+  umbrella header "Pods-DemoHermes-DemoHermesTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
