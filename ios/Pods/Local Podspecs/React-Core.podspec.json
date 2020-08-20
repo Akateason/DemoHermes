@@ -57,7 +57,8 @@
         "React/CoreModules/**/*",
         "React/DevSupport/**/*",
         "React/Fabric/**/*",
-        "React/Inspector/**/*"
+        "React/Inspector/**/*",
+        "React/CxxBridge/HermesExecutorFactory.*"
       ],
       "ios": {
         "exclude_files": "React/**/RCTTV*.*"
@@ -99,6 +100,26 @@
       "dependencies": {
         "React-Core/Default": [
           "0.63.2"
+        ]
+      }
+    },
+    {
+      "name": "Hermes",
+      "source_files": [
+        "ReactCommon/hermes/executor/*.{cpp,h}",
+        "ReactCommon/hermes/inspector/*.{cpp,h}",
+        "ReactCommon/hermes/inspector/chrome/*.{cpp,h}",
+        "ReactCommon/hermes/inspector/detail/*.{cpp,h}"
+      ],
+      "pod_target_xcconfig": {
+        "GCC_PREPROCESSOR_DEFINITIONS": "HERMES_ENABLE_DEBUGGER=1"
+      },
+      "dependencies": {
+        "Folly/Futures": [
+
+        ],
+        "hermes": [
+          "~> 0.4.1"
         ]
       }
     },
