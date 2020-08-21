@@ -6,7 +6,7 @@ platform :ios, '10.0'
 target 'DemoHermes' do
   config = use_native_modules!
 
-  use_react_native!(:path => config["reactNativePath"], :hermes_enabled => false )
+  use_react_native!(:path => config["reactNativePath"], :hermes_enabled => true )
 
   target 'DemoHermesTests' do
     inherit! :complete
