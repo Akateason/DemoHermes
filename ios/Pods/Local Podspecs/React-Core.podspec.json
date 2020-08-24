@@ -111,12 +111,11 @@
       },
       "source_files": [
         "ReactCommon/hermes/executor/*.{cpp,h}",
-        "ReactCommon/hermes/inspector/*.{cpp,h}",
-        "ReactCommon/hermes/inspector/chrome/*.{cpp,h}",
-        "ReactCommon/hermes/inspector/detail/*.{cpp,h}"
+        "React/CxxBridge/JSITracing.*",
+        "React/CxxBridge/HermesExecutorFactory.*"
       ],
       "pod_target_xcconfig": {
-        "GCC_PREPROCESSOR_DEFINITIONS": "HERMES_ENABLE_DEBUGGER=1"
+        "GCC_PREPROCESSOR_DEFINITIONS": "HERMES_ENABLE_DEBUGGER=0"
       },
       "dependencies": {
         "Folly/Futures": [
