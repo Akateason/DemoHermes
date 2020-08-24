@@ -210,6 +210,7 @@
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
 				62F407A3D5246203661EE74C /* [CP] Copy Pods Resources */,
+				9AF977E344AF0E3B4F5E7DCE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,6 +233,7 @@
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				CF5721D112FE59A3BC82A694 /* [CP] Copy Pods Resources */,
+				31995A0F0603D272A53BB8BA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -414,6 +416,26 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
+		31995A0F0603D272A53BB8BA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DemoHermes/Pods-DemoHermes-frameworks.sh",
+				"${PODS_ROOT}/../../node_modules/react-native/hermes/destroot/Library/Frameworks/hermes.framework",
+				"${PODS_ROOT}/../../node_modules/react-native/hermes/destroot/Library/Frameworks/hermes.framework.dSYM",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hermes.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/hermes.framework.dSYM",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DemoHermes/Pods-DemoHermes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4E050DBACBBAF83B5CE48DF4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -474,6 +496,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AF977E344AF0E3B4F5E7DCE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DemoHermes-DemoHermesTests/Pods-DemoHermes-DemoHermesTests-frameworks.sh",
+				"${PODS_ROOT}/../../node_modules/react-native/hermes/destroot/Library/Frameworks/hermes.framework",
+				"${PODS_ROOT}/../../node_modules/react-native/hermes/destroot/Library/Frameworks/hermes.framework.dSYM",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hermes.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/hermes.framework.dSYM",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DemoHermes-DemoHermesTests/Pods-DemoHermes-DemoHermesTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A7839B29DB3BC387C2B82A22 /* [CP] Check Pods Manifest.lock */ = {

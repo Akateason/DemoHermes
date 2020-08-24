@@ -13,9 +13,6 @@
     "git": "https://github.com/facebook/hermes.git",
     "tag": "v0.6.0"
   },
-  "platforms": {
-    "osx": "10.14"
-  },
   "preserve_paths": [
     "destroot/bin/*"
   ],
@@ -27,5 +24,11 @@
     "CLANG_CXX_LIBRARY": "compiler-default",
     "GCC_PREPROCESSOR_DEFINITIONS": "HERMES_ENABLE_DEBUGGER=1"
   },
-  "prepare_command": "if [ ! -d destroot/Library/Frameworks/hermes.framework ]; then\n  if command -v cmake > /dev/null 2>&1; then\n    if command -v ninja > /dev/null 2>&1; then\n      ./utils/build/configure.py --distribute --cmake-flags='-DHERMES_ENABLE_DEBUGGER:BOOLEAN=true -DHERMES_ENABLE_FUZZING:BOOLEAN=false -DHERMES_ENABLE_TEST_SUITE:BOOLEAN=false -DHERMES_BUILD_APPLE_FRAMEWORK:BOOLEAN=true -DHERMES_BUILD_APPLE_DSYM:BOOLEAN=true -DCMAKE_INSTALL_PREFIX:PATH=../destroot' build --build-system='Ninja' && cd build && ninja install/strip\n    else\n      ./utils/build/configure.py --distribute --cmake-flags='-DHERMES_ENABLE_DEBUGGER:BOOLEAN=true -DHERMES_ENABLE_FUZZING:BOOLEAN=false -DHERMES_ENABLE_TEST_SUITE:BOOLEAN=false -DHERMES_BUILD_APPLE_FRAMEWORK:BOOLEAN=true -DHERMES_BUILD_APPLE_DSYM:BOOLEAN=true -DCMAKE_INSTALL_PREFIX:PATH=../destroot' build --build-system='Unix Makefiles' && cd build && make install/strip\n    fi\n  else\n    echo >&2 'CMake is required to install Hermes, install it with: brew install cmake'\n    exit 1\n  fi\nfi"
+  "prepare_command": "if [ ! -d destroot/Library/Frameworks/hermes.framework ]; then\n  if command -v cmake > /dev/null 2>&1; then\n    if command -v ninja > /dev/null 2>&1; then\n      ./utils/build/configure.py --distribute --cmake-flags='-DHERMES_ENABLE_DEBUGGER:BOOLEAN=true -DHERMES_ENABLE_FUZZING:BOOLEAN=false -DHERMES_ENABLE_TEST_SUITE:BOOLEAN=false -DHERMES_BUILD_APPLE_FRAMEWORK:BOOLEAN=true -DHERMES_BUILD_APPLE_DSYM:BOOLEAN=true -DCMAKE_INSTALL_PREFIX:PATH=../destroot' build --build-system='Ninja' && cd build && ninja install/strip\n    else\n      ./utils/build/configure.py --distribute --cmake-flags='-DHERMES_ENABLE_DEBUGGER:BOOLEAN=true -DHERMES_ENABLE_FUZZING:BOOLEAN=false -DHERMES_ENABLE_TEST_SUITE:BOOLEAN=false -DHERMES_BUILD_APPLE_FRAMEWORK:BOOLEAN=true -DHERMES_BUILD_APPLE_DSYM:BOOLEAN=true -DCMAKE_INSTALL_PREFIX:PATH=../destroot' build --build-system='Unix Makefiles' && cd build && make install/strip\n    fi\n  else\n    echo >&2 'CMake is required to install Hermes, install it with: brew install cmake'\n    exit 1\n  fi\nfi",
+  "platforms": {
+    "osx": null,
+    "ios": null,
+    "tvos": null,
+    "watchos": null
+  }
 }
